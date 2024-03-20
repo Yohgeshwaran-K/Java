@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Palindrome {
+    public static void main(String[] args) {
+        Scanner scanner  = new Scanner(System.in);
+        System.out.print("Enter the words : ");
+        String input = scanner.nextLine();
+        String[] words = input.split(",");
+        
+        for (String word : words) {
+            if (palindrome(word)) {
+                System.out.println("First Palindrome :  " +word);
+                return; 
+            }
+        }
+        System.out.println("No palindrome found.");
+    }
+
+    public static boolean palindrome(String word) {
+        int start = 0;
+        int last = word.length() - 1;
+        while (start < last) {
+            if (word.charAt(start) == word.charAt(last)) {
+                start++;
+                last--;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+}
