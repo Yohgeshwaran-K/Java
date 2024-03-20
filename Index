@@ -1,0 +1,23 @@
+public class Strings {
+    public static void main(String[] args) {
+        String[] words = {"abc", "bcd", "aaaa", "cbc"};
+        int[] index = new int[words.length];
+        int count = 0;
+
+        for (int i = 0; i < words.length; i++) {
+            if (words[i].contains("a")) {
+                index[count] = i;
+                count++;
+            }
+        }
+
+        System.out.print("Output : [");
+        for (int i = 0; i < count; i++) {
+            System.out.print(index[i]);
+            if (i < count - 1) {
+                System.out.print(",");
+            }
+        }
+        System.out.println("]");
+    }
+}
