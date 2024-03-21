@@ -17,11 +17,11 @@ public class Palindrome {
     }
 
     public static boolean palindrome(String word) {
-        int start = 0;
+        int first = 0;
         int last = word.length() - 1;
-        while (start < last) {
-            if (word.charAt(start) == word.charAt(last)) {
-                start++;
+        while (first < last) {
+            if (word.charAt(first) == word.charAt(last)) {
+                first++;
                 last--;
             } else {
                 return false;
